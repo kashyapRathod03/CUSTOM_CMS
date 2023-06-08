@@ -19,13 +19,16 @@ const catagoryschema = new mongoose.Schema({
         required:true,
         unique:true
     },
-    img:{
-        type: Buffer,
-        contentType: String
-    },
     desc:{
         type:String,
         required:true,
+    },
+    img:{
+        type: String,
+        required:true,
+    },
+    check:{
+        type:Boolean
     }
 });
 

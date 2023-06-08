@@ -10,8 +10,9 @@ export default function Dashboard() {
     
         <div className="sidebar-main-div">
             <ol className='ol-list'>
-                <li onClick={() => nevigate('/admin/dashboard/catagory')} className='main-list'>catagory</li>
-                <li onClick={() => nevigate('/admin/dashboard/vendor')} className='main-list'>vendor</li>
+              <hr/>
+                <li onClick={() => nevigate('/admin/dashboard/catagory')} className='main-list'>catagory</li><hr/>
+                <li onClick={() => nevigate('/admin/dashboard/vendor')} className='main-list'>vendor</li><hr/>
             </ol>
         </div>
 

@@ -1,30 +1,168 @@
-/* styles.css */
+.lmain-div{
+  margin: 0%;
+  display: flex;    
+  border: 1px solid black;
+}
+.lside-section{
+  display: inline-block;
+  margin-top: 5%;
+  width: 10vw;
+  padding: 2% 7% 5% 0%;
+  border-right: 1px solid black;
+}
+.side-span{
+  font-size: 2vh;
+  width: fit-content;
+  border-bottom: 1px solid black;
+}
+.option_b1{
+  display: none;
+}
+/* main section...................................................................................... */
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  div {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  input[type='file'] {
-    margin-top: 5px;
-  }
-  
-  img {
-    max-width: 200px;
-    margin-top: 5px;
-  }
-  
-  button {
-    margin-top: 10px;
-  }
-  
+.main-section{
+  display: block;
+  width: 100%;
+  padding-left: 5rem;
+  margin-top: 5%;
+  /* border: 1px solid black; */
+}
+.buttons{
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content:flex-end;
+  /* border: 1px solid black; */
+}
+.form-btn{
+  margin-right: 5rem;
+  font-size: 3vh;
+  height: 5vh;
+  width: 20%;
+  color: white;
+  background-color: brown;
+  border: none;  
+  border-radius: 5px;  
+}
+.form-btn:hover{
+  color: brown;
+  background-color: transparent;
+  border: 2px solid brown;  
+}
+.main-head{
+  font-size: 4.5vh;
+  font-weight: 700;
+  color: blueviolet;
+  margin: 5% 0% 5% 0%;/*top right bottom left*/
+}
+.login-container{
+  display:flex;
+  position: fixed;
+  flex-wrap:wrap;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(87, 87, 87, 0.468);
+  transform: translateY(100%);
+  animation: slideCartWindow 0.9s ease forwards;
+}
+.close{
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
+
+}
+.close-btn{
+  margin-right: 20%;
+  font-size: 2vh;
+  height: 5vh;
+  width: 10rem;
+  color: white;
+  background-color: brown;
+  border: none;
+  border-radius: 5px;  
+}
+.close-btn:hover{
+  color: brown;
+  background-color: transparent;
+  border: 2px solid brown;  
+}
+.login-form{
+  margin:0% 5% 0% 0%;
+  padding:5% 5% 0% 5%;
+  height: 70%;
+  width: 90%;
+}
+.login-form>h2{
+  font-size: 4vh;
+}
+.form-data{
+  margin:10% 0% 0% 0%;
+}
+.form-data>label{
+  font-size: 2.5vh;
+}
+.check{
+  margin:0% 0% 0% 10%;
+  width: 7%;
+  height: 7%;
+}
+.data-image>img{
+  height: 10vh;
+  width: 10vh;
+  border-radius: 5%;
+  /* border: 10px solid black; */
+}
+.main-span{
+  display: flex;
+  justify-content: center;
+}
+.main-span2{
+  justify-content: center;
+}
+.delet-btn{
+  background-color: green;
+  color: white;
+  font-size: 2.3vh;
+  border: none;
+  border-radius: 5px;
+  height: fit-content;
+  width: 5vw;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse:separate;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+.h1{
+  line-height: 5vh;
+  width: 3vw;
+}
+.h2{
+  width: 5vw;
+}
+.h3{
+  width: 15vw;
+}
+.h4{
+  /* width: 7vw; */
+  padding: 0% 2% 0% 2%;
+}
+.h5{
+  width: 25vw;
+}
+.h6{
+  width: 15vw;
+}
+.h7{
+  width: 8vw;
+}
+
+
+
+@keyframes slideCartWindow {
+  0%{ transform: translateY(100%);}
+  100%{ transform: translateY(0);}
+}
