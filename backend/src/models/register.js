@@ -28,7 +28,7 @@ const catagoryschema = new mongoose.Schema({
         required:true,
     },
     check:{
-        type:Boolean
+        type: String
     }
 });
 
@@ -38,11 +38,26 @@ const vendorschema = new mongoose.Schema({
         required:true,
         // unique:true
     },
+    desc:{
+        type:String,
+        required:true,
+    },
+    img:{
+        type:String,
+    },
+    sku:{
+        type:String,
+        required:true,
+    },
     cat:{
         type:String,
         required:true,
     },
-    price:{
+    pprice:{
+        type:Number,
+        required:true
+    },
+    sprice:{
         type:Number,
         required:true
     },
@@ -50,10 +65,10 @@ const vendorschema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    img:{
-        type:Buffer,
-        StringType:String,
+    check:{
+        type: String
     }
+    
 });
 
 const admin = new mongoose.model("admin",userschema);
