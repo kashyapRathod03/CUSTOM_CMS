@@ -40,19 +40,19 @@
   height: 5vh;
   width: 20%;
   color: white;
-  background-color: brown;
+  background-color: rgb(6, 122, 23);
   border: none;  
   border-radius: 5px;  
 }
 .form-btn:hover{
-  color: brown;
+  color: rgb(6, 122, 23);
   background-color: transparent;
-  border: 2px solid brown;  
+  border: 2px solid rgb(6, 122, 23);  
 }
 .main-head{
   font-size: 4.5vh;
   font-weight: 700;
-  color: blueviolet;
+  color: rgb(125, 25, 37);
   margin: 5% 0% 5% 0%;/*top right bottom left*/
 }
 .login-container{
@@ -118,16 +118,23 @@
   justify-content: center;
 }
 .main-span2{
-  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  margin: 0% 2% 0% 4%;
 }
 .delet-btn{
-  background-color: green;
+  background-color: brown;
   color: white;
   font-size: 2.3vh;
   border: none;
   border-radius: 5px;
   height: fit-content;
   width: 5vw;
+}
+.delet-btn:hover{
+  background-color: transparent;
+  border: 2px solid brown;
+  color: brown;
 }
 table, th, td {
   border: 1px solid black;

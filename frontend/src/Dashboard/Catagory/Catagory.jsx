@@ -27,10 +27,10 @@ const Admin_Login = () => {
 
   // .............................................delete req for backenddata ...........................................
 
-  const deletreq = async(e)=>{
+  const deletreq = async (e) => {
     console.log(e);
     const res = axios.delete(`http://localhost:5000/deletecat/${e}`);
-    if(res){
+    if (res) {
       console.log(res.data)
       alert("item deleted successfully...");
     }
@@ -70,24 +70,17 @@ const Admin_Login = () => {
       }
     }
     data_store();
-
   };
+  // .............................................delete req for backenddata ...........................................
 
-  const handlecheck = (e) => {
-    const { value, checked } = e.target;
-    if (checked) {
-      setCheck(true)
-      console.log("-----");
-      console.log(value)
-      console.log(check);//check==false
-    }
-    else {
-      setCheck(false);
-      console.log("......");
-      console.log(check);
-    }
-  }
-
+  const updatedata =async(i,c)=>{
+    console.log(i,c);
+    const res = await axios?.put(`http://localhost:5000/updatecat/${i}`
+        ,{check:c}
+      )
+    console.log(res.data);
+    showdata();
+  };
 
   return (<>
 
@@ -95,15 +88,6 @@ const Admin_Login = () => {
       <div className='lside-section'>
         <Dashboard />
       </div>
-      {/* <div className="option_b1">
-                    <Option />
-                </div>
-                <SidebarL /> */}
-
-
-      {/* side section end .....................................................................*/}
-      {/* main section start */}
-
       {/*................................................form............................................... */}
 
       {form &&
@@ -121,8 +105,12 @@ const Admin_Login = () => {
               <input type="text" placeholder='Description' name='desc' value={desc} onChange={(event) => setDesc(event.target.value)} />
               <label htmlFor="img">Image:</label><br />
               <input accept='image/*' type='file' onChange={(e) => setImage(e.target.files[0])} /><br /><br />
-              <label class="switch">Publish or Not</label>
-              <input type="checkbox" className='check' value={"publish"} onChange={handlecheck} />
+              <label class="switch">Publish or Not</label><br />
+              {/* <input type="checkbox" className='check' value={"publish"} onChange={handlecheck} /> */}
+              <input type="radio" id="html" name="publish" value="publish" onChange={(e)=>setCheck(e.target.value)}/>
+              <label for="html">Publish</label>
+              <input type="radio" id="css" name="publish" value="unpublish"  onChange={(e)=>setCheck(e.target.value)}/>
+              <label for="css">Unpublish</label><br />
               <button type="submit">Add</button>
             </div>
           </form>
@@ -136,30 +124,33 @@ const Admin_Login = () => {
 
         {/* ....................................................backenddata........................................ */}
         <div className="backend-data">
-              <table>
-                <tr>
-                  <th className='h1'>No.</th>
-                  <th className='h2'>Id</th>
-                  <th className='h3'>Catagory</th>
-                  <th className='h4'>Image</th>
-                  <th className='h5'>Description</th>
-                  <th className='h6'>Publlish</th>
-                  <th className='h7'>delete</th>
-                </tr>
-                
-          {data?.map((item, i) =>
-                <tr>
-                  <td><span className="main-span">{++i}</span></td>
-                  <td><span className="main-span">...{item._id.slice(20,24)}</span></td>
-                  <td><span className="main-span">{item.desc.length>=10?`${item.desc.slice(0,15)}...` :item.desc}</span></td>
-                  <td><span className="data-image"><img src={`http://localhost:5000/${item.img}`} alt="" /></span></td>
-                  <td><span className="main-span">{item.desc.length>=50?`${item.desc.slice(0,70)}...` :item.desc}</span><br /></td>
-                  <td> {item.check===true ?
-                  <div><span className="main-span2">Published</span> <input type="checkbox" className='check' checked/></div>
-                  :<div><span className="main-span2">Unpublished</span><input type="checkbox" className='check' /></div>}</td>
-                  <td><span className="main-span"><button className="delet-btn" onClick={()=>deletreq(item._id)}>Delete</button></span></td>
-                </tr>
-          )}
+          <table>
+            <tr>
+              <th className='h5'>No.</th>
+              <th className='h5'>Id</th>
+              <th className='h5'>Catagory</th>
+              <th className='h5'>Image</th>
+              <th className='h5'>Description</th>
+              <th className='h5'>Publlish</th>
+              <th className='h5'>delete</th>
+            </tr>
+
+            {data?.map((item, i) =>
+              <tr>
+                <td><span className="main-span">{++i}</span></td>
+                <td><span className="main-span">...{item._id.slice(20, 24)}</span></td>
+                <td><span className="main-span">{item.catagory.length >= 10 ? `${item.catagory.slice(0, 15)}...` : item.catagory}</span></td>
+                <td><span className="data-image"><img src={`http://localhost:5000/${item.img}`} alt="" /></span></td>
+                <td><span className="main-span">{item.desc.length >= 50 ? `${item.desc.slice(0, 70)}...` : item.desc}</span><br /></td>
+                <td>
+                   {/* {item.check === "publish"  */}
+                   {item.check === "publish" ?
+                  <div><span style={{color:"green"}} className="main-span2">Published</span><span style={{color:"red"}} className="main-span2" onClick={()=>updatedata(item._id,'unpublish')}>Unpublished</span></div>:
+                  <div><span style={{color:"red"}} onClick={()=>updatedata(item._id,'publish')} className="main-span2">Published</span><span style={{color:"green"}} className="main-span2">Unpublished</span></div>
+                  }</td>
+                <td><span className="main-span"><button className="delet-btn" onClick={() => deletreq(item._id)}>Delete</button></span></td>
+              </tr>
+            )}
           </table>
         </div>
 

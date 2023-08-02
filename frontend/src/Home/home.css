@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(236, 224, 237);
+}
+.navbar{
+    background-color: rgb(203, 172, 234) !important;
+}
+.navbar-brand{
+    margin-left: 10%;
+    color: white;
+    font-size: 3vh;
+}
+.navbar-nav{
+    margin-left: 10%;
+    color: white;
+    font-size: 2.5vh;
+}
+.banner{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    padding: 0% 2% 0% 2%;
+    margin: 1% 5% 0% 5%;
+    background-color: whitesmoke;
+    /* background-color:rgb(229, 204, 231) ; */
+    /* border: 1px solid black; */
+}
+.text-content{
+    padding: 0% 2% 0% 2%;
+    text-align: left;
+}
+.text-content>h1{
+    font-size: 5vh;
+    font-weight: 800;
+    margin: 10% 0% 6% 30%;
+    color: rgb(174, 23, 239);
+}
+.text-content>p{
+    text-align: justify;
+    font-size: 2.5vh;
+    font-weight: 600;
+}
+.ctas{
+    width: 50%;
+    display: flex;
+    margin: 0% 0% 0% 0%;
+}
+.banner-cta{
+    /* height: 4vh; */
+    /* width: 20vw; */
+    font-size: 2.5vh;
+    text-align: center;
+    align-items: center;
+    margin: 6% 0% 0% 30%;
+    border-radius: 2px;
+    background-color: transparent;
+    border: 2px solid rgb(232, 80, 234);
+}
+.banner-cta:hover{
+    background-color: rgb(232, 80, 234);
+    border: none;
+    color: white;
+}
+.showup-img{
+    height: 80vh;
+    /* margin-left: 60%; */
+    /* border: 1px solid black; */
+}
+
+.main-div{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.cart-div,.card{
+    margin: 2% 0% 2% 2%;
+    border-radius: 2px;
+    background-color: whitesmoke !important;
+}

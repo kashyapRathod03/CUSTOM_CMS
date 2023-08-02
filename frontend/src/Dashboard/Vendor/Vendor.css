@@ -5,7 +5,7 @@
 }
 .lside-section{
   display: inline-block;
-  margin-top: 5%;
+  margin-top: 3%;
   width: 10vw;
   padding: 2% 7% 5% 0%;
   border-right: 1px solid black;
@@ -24,7 +24,7 @@
   display: block;
   width: 100%;
   padding-left: 5rem;
-  margin-top: 5%;
+  margin-top: 3%;
   /* border: 1px solid black; */
 }
 .buttons{
@@ -40,19 +40,19 @@
   height: 5vh;
   width: 20%;
   color: white;
-  background-color: brown;
+  background-color: green;
   border: none;  
   border-radius: 5px;  
 }
 .form-btn:hover{
-  color: brown;
+  color: green;
   background-color: transparent;
-  border: 2px solid brown;  
+  border: 2px solid green;  
 }
 .main-head{
   font-size: 4.5vh;
   font-weight: 700;
-  color: blueviolet;
+  color: rgb(113, 34, 34);
   margin: 5% 0% 5% 0%;/*top right bottom left*/
 }
 .login-container{
@@ -70,7 +70,6 @@
   width: 100%;
   display: flex;
   justify-content:flex-end;
-
 }
 .close-btn{
   margin-right: 20%;
@@ -88,10 +87,11 @@
   border: 2px solid brown;  
 }
 .login-form{
-  margin:0% 5% 0% 0%;
-  padding:5% 5% 0% 5%;
+  margin:-7% 5% 0% 0%;
+  padding:0% 5% 0% 5%;
   height: 70%;
   width: 90%;
+  overflow-y: scroll;
 }
 .login-form>h2{
   font-size: 4vh;
@@ -108,7 +108,7 @@
   height: 7%;
 }
 .data-image>img{
-  height: 10vh;
+  height: 7vh;
   width: 10vh;
   border-radius: 5%;
   /* border: 10px solid black; */
@@ -116,18 +116,34 @@
 .main-span{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .main-span2{
   justify-content: center;
 }
+.main-span-btn{
+  height: 4vh;
+  width: 4vw;
+  font-size: 3vh;
+  padding: 1% 5% 1% 5%;
+  margin: 1% 5% 1% 40%;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid black;
+}
 .delet-btn{
-  background-color: green;
+  background-color: brown;
   color: white;
   font-size: 2.3vh;
   border: none;
   border-radius: 5px;
   height: fit-content;
   width: 5vw;
+}
+.delet-btn:hover{
+  background-color: transparent;
+  border: 2px solid brown;
+  color: brown;
 }
 table, th, td {
   border: 1px solid black;
@@ -136,28 +152,34 @@ table, th, td {
 tr:nth-child(even) {
   background-color: #D6EEEE;
 }
-.h1{
+.p1{
   line-height: 5vh;
-  width: 3vw;
-}
-.h2{
   width: 5vw;
 }
-.h3{
+.p2{
+  width: 10vw;
+}
+.p3{
+  width: 10vw;
+}
+.p4{
+  width: 7vw;
+}
+.p5{
+  width: 7vw;
+}
+.p6{
+  width: 7vw;
+}
+.p8{
+  width: 6vw;
+  text-align: center;
+}
+.p9{  
   width: 15vw;
 }
-.h4{
-  /* width: 7vw; */
-  padding: 0% 2% 0% 2%;
-}
-.h5{
-  width: 25vw;
-}
-.h6{
-  width: 15vw;
-}
-.h7{
-  width: 8vw;
+.p10{
+  width: 6vw;
 }
 
 
